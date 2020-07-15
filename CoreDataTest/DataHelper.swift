@@ -13,16 +13,17 @@ class DataHelper {
                 print("could not load store \(error.localizedDescription)")
                 return
             }
-            print("store loaded")
+            print("CoreDataTest store loaded")
         }
     }
     
-    func deleteStore() {
-        let datamodelName = "CoreDataTest"
+    func deleteStore(storeName: String) {
+        let programName = "CoreDataTest"
         let storeType = "sqlite"
         let url: URL = {
-            let url = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask)[0].appendingPathComponent("\(datamodelName).\(storeType)")
-            print("URL \(url)")
+            let url = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask)[0].appendingPathComponent("\(programName)/\(storeName).\(storeType)")
+            //print("url = \(url)")
+            //print("url.path = \(url.path)")
             assert(FileManager.default.fileExists(atPath: url.path))
 
             return url
@@ -30,64 +31,49 @@ class DataHelper {
         try! persistentContainer.persistentStoreCoordinator.destroyPersistentStore(at: url, ofType: storeType, options: nil)
     }
     
-    func insertTest1(name: String, arrayInfo: [Int]) {
-        print("Inserting new array1 item \(name) with data \(arrayInfo)")
-        let myTest1 = Test1(context: self.context)
-        myTest1.name1 = name
-        myTest1.array1 = arrayInfo
+    func insertTest1(name: String, arrayInfo: [Int]) throws {
+        print("Inserting new Test1 item named \(name) with data \(arrayInfo)")
+        let test1 = Test1(context: self.context)
+        test1.name1 = name
+        test1.array1 = arrayInfo
         
-        self.context.insert(myTest1)
-        do {
-            try self.context.save()
-        } catch {
-            // Customize this code block to include application-specific recovery steps.
-            let nserror = error as NSError
-            NSApplication.shared.presentError(nserror)
-        }
+        self.context.insert(test1)
+        try self.context.save()
     }
     
-    func fetchTest1(name: String) -> [Test1] {
-        var test1Info = [Test1]()
+    func fetchTest1() throws -> [Test1] {
+        let test1 = try self.context.fetch(Test1.fetchRequest() as NSFetchRequest<Test1>)
+        return test1
+    }
+    
+    func fetchTest1(withName name: String) throws -> [Test1] {
         let request = NSFetchRequest<Test1>(entityName: "Test1")
         request.predicate = NSPredicate(format: "name1 == %@", name)
-        do {
-            test1Info = try self.context.fetch(request)
-        } catch {
-            // Customize this code block to include application-specific recovery steps.
-            let nserror = error as NSError
-            NSApplication.shared.presentError(nserror)
-        }
-        return test1Info
+        
+        let test1 = try self.context.fetch(request)
+        return test1
     }
     
-    func insertTest2(name: String, dictionaryInfo: [String:Int]) {
-        print("Inserting new dictionary1 item \(dictionaryInfo)")
+    func insertTest2(name: String, dictionaryInfo: [String:Int]) throws {
+        print("Inserting new Test2 item named \(name) with data \(dictionaryInfo)")
         let myTest2 = Test2(context: self.context)
         myTest2.name1 = name
         myTest2.dictionary1 = dictionaryInfo
         
         self.context.insert(myTest2)
-        do {
-            try self.context.save()
-        } catch {
-            // Customize this code block to include application-specific recovery steps.
-            let nserror = error as NSError
-            NSApplication.shared.presentError(nserror)
-        }
+        try self.context.save()
     }
     
-    func fetchTest2(name: String) -> [Test2] {
-        var dictionary1Info = [Test2]()
+    func fetchTest2() throws -> [Test2] {
+        let test2 = try self.context.fetch(Test2.fetchRequest() as NSFetchRequest<Test2>)
+        return test2
+    }
+    
+    func fetchTest2(withName name: String) throws -> [Test2] {
         let request = NSFetchRequest<Test2>(entityName: "Test2")
         request.predicate = NSPredicate(format: "name1 == %@", name)
-        
-        do {
-            dictionary1Info = try self.context.fetch(request)
-        } catch {
-            // Customize this code block to include application-specific recovery steps.
-            let nserror = error as NSError
-            NSApplication.shared.presentError(nserror)
-        }
+
+        let dictionary1Info = try self.context.fetch(request)
         return dictionary1Info
     }
 }

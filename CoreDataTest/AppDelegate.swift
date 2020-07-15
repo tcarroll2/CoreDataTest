@@ -12,15 +12,48 @@ import Cocoa
 class AppDelegate: NSObject, NSApplicationDelegate {
 
     let dataHelper = DataHelper()
+    let dataController = DataController()
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
+        dataHelper.deleteStore(storeName: "CoreDataTest")
+        dataHelper.deleteStore(storeName: "LibraryDataModel")
         dataHelper.initalizeStack()
-        //dataHelper.deleteStore()
-        dataHelper.insertTest1(name: "arrayName1", arrayInfo: [35,42,2,16])
-        dataHelper.insertTest2(name: "dictionaryName1", dictionaryInfo: ["One" : 1, "Two" : 2, "Three" : 3, "Four" : 4, "Five" : 5])
-        print("Test1 value: \(dataHelper.fetchTest1(name: "arrayName1"))")
-        print("Test2 value: \(dataHelper.fetchTest2(name: "dictionaryName1"))")
+        dataController.initalizeStack()
+        do {
+            try dataController.insertUser(withBook: true)
+        } catch {
+            print("An error occured while inserting User")
+        }
+        do {
+            try dataHelper.insertTest1(name: "arrayName1", arrayInfo: [35, 42, 2, 16])
+        } catch {
+            print("An error occured while inserting Test1")
+        }
+        do {
+            try dataHelper.insertTest2(name: "dictionaryName1", dictionaryInfo: ["One" : 1, "Two" : 2, "Three" : 3, "Four" : 4, "Five" : 5])
+        } catch {
+            print("An error occured while inserting Test2")
+        }
+        do {
+            try print("Test1 value: \(dataHelper.fetchTest1())")
+            try print("Test1 value (withName): \(dataHelper.fetchTest1(withName: "arrayName1"))")
+        } catch {
+            print("Error occured while attempting to fetch Test1")
+        }
+        do {
+            try print("Test2 value: \(dataHelper.fetchTest2())")
+            try print("Test2 value (withName): \(dataHelper.fetchTest2(withName: "dictionaryName1"))")
+        } catch {
+            print("Error occured while attempting to fetch Test2")
+        }
+        do {
+            let users = try dataController.fetchUsers()
+            print("Users: \(users)")
+        } catch {
+            print("An error occured while inserting User")
+        }
+
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

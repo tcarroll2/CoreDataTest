@@ -18,6 +18,6 @@ extension Test1 {
     }
 
     @NSManaged public var name1: String
-    @NSManaged public var array1: [Int]
+    @NSManaged public var array1: Array<Int>
 
 }

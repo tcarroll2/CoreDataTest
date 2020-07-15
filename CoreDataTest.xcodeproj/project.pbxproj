@@ -18,6 +18,12 @@
 		FAAE7A5824BEA0B10053B4B0 /* Test1+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAE7A5424BEA0B10053B4B0 /* Test1+CoreDataProperties.swift */; };
 		FAAE7A5A24BEA1AF0053B4B0 /* DataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAE7A5924BEA1AF0053B4B0 /* DataHelper.swift */; };
 		FAAE7A5C24BEB49F0053B4B0 /* README.MD in Resources */ = {isa = PBXBuildFile; fileRef = FAAE7A5B24BEB49F0053B4B0 /* README.MD */; };
+		FAAE7A5F24BEBE5A0053B4B0 /* LibraryDataModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FAAE7A5D24BEBE5A0053B4B0 /* LibraryDataModel.xcdatamodeld */; };
+		FAAE7A6224BEBF8B0053B4B0 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAE7A6024BEBF8B0053B4B0 /* User+CoreDataClass.swift */; };
+		FAAE7A6324BEBF8B0053B4B0 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAE7A6124BEBF8B0053B4B0 /* User+CoreDataProperties.swift */; };
+		FAAE7A6524BEC0960053B4B0 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAE7A6424BEC0960053B4B0 /* DataController.swift */; };
+		FAAE7A6824BEC34C0053B4B0 /* Book+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAE7A6624BEC34C0053B4B0 /* Book+CoreDataClass.swift */; };
+		FAAE7A6924BEC34C0053B4B0 /* Book+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAE7A6724BEC34C0053B4B0 /* Book+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +41,12 @@
 		FAAE7A5424BEA0B10053B4B0 /* Test1+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Test1+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		FAAE7A5924BEA1AF0053B4B0 /* DataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHelper.swift; sourceTree = "<group>"; };
 		FAAE7A5B24BEB49F0053B4B0 /* README.MD */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.MD; sourceTree = "<group>"; };
+		FAAE7A5E24BEBE5A0053B4B0 /* LibraryDataModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = LibraryDataModel.xcdatamodel; sourceTree = "<group>"; };
+		FAAE7A6024BEBF8B0053B4B0 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
+		FAAE7A6124BEBF8B0053B4B0 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		FAAE7A6424BEC0960053B4B0 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		FAAE7A6624BEC34C0053B4B0 /* Book+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Book+CoreDataClass.swift"; sourceTree = "<group>"; };
+		FAAE7A6724BEC34C0053B4B0 /* Book+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Book+CoreDataProperties.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,12 +80,18 @@
 		FAAE7A3D24BEA02D0053B4B0 /* CoreDataTest */ = {
 			isa = PBXGroup;
 			children = (
+				FAAE7A6624BEC34C0053B4B0 /* Book+CoreDataClass.swift */,
+				FAAE7A6724BEC34C0053B4B0 /* Book+CoreDataProperties.swift */,
+				FAAE7A6024BEBF8B0053B4B0 /* User+CoreDataClass.swift */,
+				FAAE7A6124BEBF8B0053B4B0 /* User+CoreDataProperties.swift */,
+				FAAE7A6424BEC0960053B4B0 /* DataController.swift */,
 				FAAE7A5124BEA0B10053B4B0 /* Test2+CoreDataClass.swift */,
 				FAAE7A5224BEA0B10053B4B0 /* Test2+CoreDataProperties.swift */,
 				FAAE7A5324BEA0B10053B4B0 /* Test1+CoreDataClass.swift */,
 				FAAE7A5424BEA0B10053B4B0 /* Test1+CoreDataProperties.swift */,
 				FAAE7A3E24BEA02D0053B4B0 /* AppDelegate.swift */,
 				FAAE7A5924BEA1AF0053B4B0 /* DataHelper.swift */,
+				FAAE7A5D24BEBE5A0053B4B0 /* LibraryDataModel.xcdatamodeld */,
 				FAAE7A4024BEA02D0053B4B0 /* ViewController.swift */,
 				FAAE7A4524BEA02E0053B4B0 /* Assets.xcassets */,
 				FAAE7A4724BEA02E0053B4B0 /* Main.storyboard */,
@@ -156,12 +174,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAAE7A4124BEA02D0053B4B0 /* ViewController.swift in Sources */,
+				FAAE7A6524BEC0960053B4B0 /* DataController.swift in Sources */,
 				FAAE7A5624BEA0B10053B4B0 /* Test2+CoreDataProperties.swift in Sources */,
 				FAAE7A4424BEA02D0053B4B0 /* CoreDataTest.xcdatamodeld in Sources */,
+				FAAE7A5F24BEBE5A0053B4B0 /* LibraryDataModel.xcdatamodeld in Sources */,
+				FAAE7A6224BEBF8B0053B4B0 /* User+CoreDataClass.swift in Sources */,
 				FAAE7A5524BEA0B10053B4B0 /* Test2+CoreDataClass.swift in Sources */,
 				FAAE7A3F24BEA02D0053B4B0 /* AppDelegate.swift in Sources */,
+				FAAE7A6324BEBF8B0053B4B0 /* User+CoreDataProperties.swift in Sources */,
 				FAAE7A5A24BEA1AF0053B4B0 /* DataHelper.swift in Sources */,
+				FAAE7A6824BEC34C0053B4B0 /* Book+CoreDataClass.swift in Sources */,
 				FAAE7A5824BEA0B10053B4B0 /* Test1+CoreDataProperties.swift in Sources */,
+				FAAE7A6924BEC34C0053B4B0 /* Book+CoreDataProperties.swift in Sources */,
 				FAAE7A5724BEA0B10053B4B0 /* Test1+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -364,6 +388,16 @@
 			);
 			currentVersion = FAAE7A4324BEA02D0053B4B0 /* CoreDataTest.xcdatamodel */;
 			path = CoreDataTest.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		FAAE7A5D24BEBE5A0053B4B0 /* LibraryDataModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				FAAE7A5E24BEBE5A0053B4B0 /* LibraryDataModel.xcdatamodel */,
+			);
+			currentVersion = FAAE7A5E24BEBE5A0053B4B0 /* LibraryDataModel.xcdatamodel */;
+			path = LibraryDataModel.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};
