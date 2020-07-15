@@ -12,6 +12,11 @@
 		FAAE7A4424BEA02D0053B4B0 /* CoreDataTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = FAAE7A4224BEA02D0053B4B0 /* CoreDataTest.xcdatamodeld */; };
 		FAAE7A4624BEA02E0053B4B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAAE7A4524BEA02E0053B4B0 /* Assets.xcassets */; };
 		FAAE7A4924BEA02E0053B4B0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FAAE7A4724BEA02E0053B4B0 /* Main.storyboard */; };
+		FAAE7A5524BEA0B10053B4B0 /* Test2+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAE7A5124BEA0B10053B4B0 /* Test2+CoreDataClass.swift */; };
+		FAAE7A5624BEA0B10053B4B0 /* Test2+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAE7A5224BEA0B10053B4B0 /* Test2+CoreDataProperties.swift */; };
+		FAAE7A5724BEA0B10053B4B0 /* Test1+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAE7A5324BEA0B10053B4B0 /* Test1+CoreDataClass.swift */; };
+		FAAE7A5824BEA0B10053B4B0 /* Test1+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAE7A5424BEA0B10053B4B0 /* Test1+CoreDataProperties.swift */; };
+		FAAE7A5A24BEA1AF0053B4B0 /* DataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAAE7A5924BEA1AF0053B4B0 /* DataHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +28,11 @@
 		FAAE7A4824BEA02E0053B4B0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FAAE7A4A24BEA02E0053B4B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FAAE7A4B24BEA02E0053B4B0 /* CoreDataTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CoreDataTest.entitlements; sourceTree = "<group>"; };
+		FAAE7A5124BEA0B10053B4B0 /* Test2+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Test2+CoreDataClass.swift"; sourceTree = "<group>"; };
+		FAAE7A5224BEA0B10053B4B0 /* Test2+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Test2+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		FAAE7A5324BEA0B10053B4B0 /* Test1+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Test1+CoreDataClass.swift"; sourceTree = "<group>"; };
+		FAAE7A5424BEA0B10053B4B0 /* Test1+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Test1+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		FAAE7A5924BEA1AF0053B4B0 /* DataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +65,12 @@
 		FAAE7A3D24BEA02D0053B4B0 /* CoreDataTest */ = {
 			isa = PBXGroup;
 			children = (
+				FAAE7A5124BEA0B10053B4B0 /* Test2+CoreDataClass.swift */,
+				FAAE7A5224BEA0B10053B4B0 /* Test2+CoreDataProperties.swift */,
+				FAAE7A5324BEA0B10053B4B0 /* Test1+CoreDataClass.swift */,
+				FAAE7A5424BEA0B10053B4B0 /* Test1+CoreDataProperties.swift */,
 				FAAE7A3E24BEA02D0053B4B0 /* AppDelegate.swift */,
+				FAAE7A5924BEA1AF0053B4B0 /* DataHelper.swift */,
 				FAAE7A4024BEA02D0053B4B0 /* ViewController.swift */,
 				FAAE7A4524BEA02E0053B4B0 /* Assets.xcassets */,
 				FAAE7A4724BEA02E0053B4B0 /* Main.storyboard */,
@@ -137,8 +152,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				FAAE7A4124BEA02D0053B4B0 /* ViewController.swift in Sources */,
+				FAAE7A5624BEA0B10053B4B0 /* Test2+CoreDataProperties.swift in Sources */,
 				FAAE7A4424BEA02D0053B4B0 /* CoreDataTest.xcdatamodeld in Sources */,
+				FAAE7A5524BEA0B10053B4B0 /* Test2+CoreDataClass.swift in Sources */,
 				FAAE7A3F24BEA02D0053B4B0 /* AppDelegate.swift in Sources */,
+				FAAE7A5A24BEA1AF0053B4B0 /* DataHelper.swift in Sources */,
+				FAAE7A5824BEA0B10053B4B0 /* Test1+CoreDataProperties.swift in Sources */,
+				FAAE7A5724BEA0B10053B4B0 /* Test1+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

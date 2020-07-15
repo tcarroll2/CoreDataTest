@@ -1,4 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="1" systemVersion="11A491" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithCloudKit="false" userDefinedModelVersionIdentifier="">
-    <elements/>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19F101" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Test1" representedClassName=".Test1" syncable="YES">
+        <attribute name="array1" optional="YES" attributeType="Transformable"/>
+    </entity>
+    <entity name="Test2" representedClassName="Test2" syncable="YES">
+        <attribute name="dictionary1" optional="YES" attributeType="Transformable" customClassName="."/>
+    </entity>
+    <elements>
+        <element name="Test1" positionX="-45" positionY="0" width="128" height="58"/>
+        <element name="Test2" positionX="-18" positionY="36" width="128" height="58"/>
+    </elements>
 </model>

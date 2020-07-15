@@ -11,10 +11,16 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
-
+    let dataHelper = DataHelper()
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
+        dataHelper.initalizeStack()
+        //dataHelper.deleteStore()
+        dataHelper.insertArray1(arrayInfo: [35,42,2,16])
+        dataHelper.insertDictionary1(dictionaryInfo: ["One" : 1, "Two" : 2, "Three" : 3, "Four" : 4, "Five" : 5])
+        print("array1 value: \(dataHelper.fetchArray1())")
+        print("dictionary1 value: \(dataHelper.fetchDictionary1())")
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
@@ -118,5 +124,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         return .terminateNow
     }
 
+    func applicationShouldTerminateAfterLastWindowClosed(_ sender: NSApplication) -> Bool {
+        return true
+    }
 }
 
