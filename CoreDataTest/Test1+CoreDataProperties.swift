@@ -17,6 +17,7 @@ extension Test1 {
         return NSFetchRequest<Test1>(entityName: "Test1")
     }
 
+    @NSManaged public var name1: String
     @NSManaged public var array1: [Int]
 
 }

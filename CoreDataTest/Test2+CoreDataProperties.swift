@@ -17,6 +17,7 @@ extension Test2 {
         return NSFetchRequest<Test2>(entityName: "Test2")
     }
 
+    @NSManaged public var name1: String
     @NSManaged public var dictionary1: [String:Int]
 
 }

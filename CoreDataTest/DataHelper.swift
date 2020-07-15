@@ -30,12 +30,13 @@ class DataHelper {
         try! persistentContainer.persistentStoreCoordinator.destroyPersistentStore(at: url, ofType: storeType, options: nil)
     }
     
-    func insertArray1(arrayInfo: [Int]) {
-        print("Inserting new array1 item \(arrayInfo)")
-        let myArray = Test1(context: self.context)
-        myArray.array1 = arrayInfo
+    func insertTest1(name: String, arrayInfo: [Int]) {
+        print("Inserting new array1 item \(name) with data \(arrayInfo)")
+        let myTest1 = Test1(context: self.context)
+        myTest1.name1 = name
+        myTest1.array1 = arrayInfo
         
-        self.context.insert(myArray)
+        self.context.insert(myTest1)
         do {
             try self.context.save()
         } catch {
@@ -45,26 +46,27 @@ class DataHelper {
         }
     }
     
-    func fetchArray1() -> [Test1] {
-        var array1Info = [Test1]()
+    func fetchTest1(name: String) -> [Test1] {
+        var test1Info = [Test1]()
         let request = NSFetchRequest<Test1>(entityName: "Test1")
-        
+        request.predicate = NSPredicate(format: "name1 == %@", name)
         do {
-            array1Info = try self.context.fetch(request)
+            test1Info = try self.context.fetch(request)
         } catch {
             // Customize this code block to include application-specific recovery steps.
             let nserror = error as NSError
             NSApplication.shared.presentError(nserror)
         }
-        return array1Info
+        return test1Info
     }
     
-    func insertDictionary1(dictionaryInfo: [String:Int]) {
+    func insertTest2(name: String, dictionaryInfo: [String:Int]) {
         print("Inserting new dictionary1 item \(dictionaryInfo)")
-        let myDictionary = Test2(context: self.context)
-        myDictionary.dictionary1 = dictionaryInfo
+        let myTest2 = Test2(context: self.context)
+        myTest2.name1 = name
+        myTest2.dictionary1 = dictionaryInfo
         
-        self.context.insert(myDictionary)
+        self.context.insert(myTest2)
         do {
             try self.context.save()
         } catch {
@@ -74,9 +76,10 @@ class DataHelper {
         }
     }
     
-    func fetchDictionary1() -> [Test2] {
+    func fetchTest2(name: String) -> [Test2] {
         var dictionary1Info = [Test2]()
         let request = NSFetchRequest<Test2>(entityName: "Test2")
+        request.predicate = NSPredicate(format: "name1 == %@", name)
         
         do {
             dictionary1Info = try self.context.fetch(request)

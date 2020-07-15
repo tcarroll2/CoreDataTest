@@ -17,10 +17,10 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Insert code here to initialize your application
         dataHelper.initalizeStack()
         //dataHelper.deleteStore()
-        dataHelper.insertArray1(arrayInfo: [35,42,2,16])
-        dataHelper.insertDictionary1(dictionaryInfo: ["One" : 1, "Two" : 2, "Three" : 3, "Four" : 4, "Five" : 5])
-        print("array1 value: \(dataHelper.fetchArray1())")
-        print("dictionary1 value: \(dataHelper.fetchDictionary1())")
+        dataHelper.insertTest1(name: "arrayName1", arrayInfo: [35,42,2,16])
+        dataHelper.insertTest2(name: "dictionaryName1", dictionaryInfo: ["One" : 1, "Two" : 2, "Three" : 3, "Four" : 4, "Five" : 5])
+        print("Test1 value: \(dataHelper.fetchTest1(name: "arrayName1"))")
+        print("Test2 value: \(dataHelper.fetchTest2(name: "dictionaryName1"))")
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
